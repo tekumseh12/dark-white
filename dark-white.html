@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href = "dark-white.css" rel='stylesheet' type="text/css">
+  </head>
+  <body>
+  <svg width="1" height="1">
+    <circle id = "circle2" ></circle>
+  </svg>
+  <nav>
+
+      <svg height="45" width="135" class="semafor">
+        <circle cx="22.5" cy="22.5" r="6" fill="red" stroke="black"></circle>
+        <circle cx="67.5" cy="22.5" r="6" fill="yellow" stroke="black"></circle>
+        <circle cx="112.5" cy="22.5" r="6" fill="green" stroke="black"></circle>
+
+      </svg>
+
+      <svg height="45" width="100" class="prepinac">
+
+        <line x1="20" y1="22.5" x2="53" y2="22.5" stroke-linecap="round" stroke-width="22" stroke="black" onclick="whiteblack()" />
+        <line x1="20" y1="22.5" x2="53" y2="22.5" stroke-linecap="round" stroke-width="20" stroke="white"  onclick="whiteblack()" />
+        <circle id = "circle1" cx="25.5" cy="22.5" r="7" fill="white" stroke="black" onclick="whiteblack()"> </circle>
+
+
+
+      </svg>
+
+
+
+  </nav>
+
+    <div id="text">V rorrku 1878 nafotografoval Eadweard Muybridge sériu statických fotografií s použitím 24 fotoaparátov. Usporiadaním obrázkov v slede za sebou vytvoril koncepciu „pohyblivých obrázkov“ vo filme. Stal sa tak priekopníkom kinematografie, najobľúbenejšej zábavy 20. storočia. Je to vlastne animácia.
+
+Thomas Alva Edison sa ujal nápadu zostrojiť prístroj nazývaný kinetoskop, ktorý umožňoval 90-sekundové premietanie pohyblivých obrázkov. Mohol ich sledovať len jeden človek cez hľadáčik. Francúzski bratia Lumièrovci posunuli vývoj o krok dopredu zostrojením prístroja, ktorý umožnil nasnímať zábery na celuloidový pás a zároveň ich užasnutým divákom premietať na bielu stenu.
+
+Premietanie filmov si obľúbili ľudia na celom svete, najmä však v USA. Film, ktorý priniesol nový prvok do dejín kinematografie, bola 11-minútová dramatická snímka Edwina Portera. „Veľká vlaková lúpež“ r. 1903. V ňom skupina pištoľníkov prepadne vlak a ujdú. Potom ich ale dopadnú pri úteku na koňoch a pištoľníkov zabijú.</dir>
+  <script>
+  var number = 1
+    function whiteblack(){
+      console.log(1)
+      const circle1 = document.getElementById("circle1");
+      const circle2 = document.getElementById("circle2");
+      const lines = document.getElementsByTagName("line");
+      const div = document.getElementById("text");
+      const nav =  document.getElementsByTagName("nav")[0];
+
+      circle2.style.animationName = "whiteblack2"
+      if (number % 2 == 1){
+        circle1.style.animationFillMode = "forwards";
+        circle1.style.animationName = "whiteblack1"
+        circle2.style.animationName = 'whiteblack2'
+        div.style.color="white";
+        nav.style.borderColor = "white";
+
+
+
+
+      }else{
+        div.style.color="black";
+        circle1.style.animationFillMode = "backwards";
+        // circle1.style.animationName = "whiteblack1"
+        circle2.style.animationName = 'whiteblack3'
+        nav.style.borderColor = "black";
+
+
+
+      }
+      number++
+  }
+
+
+
+  </script>
+  </body>
+</html>

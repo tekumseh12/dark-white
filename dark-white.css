@@ -1,0 +1,59 @@
+nav {
+  padding:0px;
+  height:45px;
+  width:100%;
+  border-style:solid;
+  position:relative;
+  left:-1px;
+  border-width:1px;
+  border-color:black;
+
+}
+body {
+  margin:0px;
+
+
+}
+
+.semafor {
+  margin:0px;
+}
+.prepinac {
+  position:absolute;
+  right:0px;
+  padding:0;
+}
+@keyframes whiteblack1 {
+  from {cx:22.5px;}
+  to {cx:47.5px;fill: white;}
+
+}
+#circle2 {
+
+  background-color: black;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+  position:absolute;
+
+
+
+}
+@keyframes whiteblack2 {
+  from {r:0px;}
+  to {r:1900px;}
+}
+
+svg {
+
+
+  overflow:visible;
+}
+.svg {
+  padding:0;
+  margin:0;
+}
+
+@keyframes whiteblack3 {
+  from {r:1900px;}
+  to {r:0px;}
+}
